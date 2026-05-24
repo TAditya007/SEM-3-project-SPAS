@@ -1,0 +1,6 @@
+Case Name,Total Vehicles,Allocated Vehicles,Unallocated Vehicles,Allocation Rate (%),Average Utility,Highest Utility
+case1_normal,5,4,1,80.0,53.25,78
+case2_vip_priority,3,3,0,100.0,50.33,81
+case3_ev_charging,3,2,1,66.67,57.0,80
+case4_no_slot,3,1,2,33.33,78.0,78
+case5_mixed_complex,6,5,1,83.33,56.4,79

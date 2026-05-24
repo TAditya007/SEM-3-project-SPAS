@@ -1,0 +1,7 @@
+Parking Allocation Result - case1_normal
+------------------------------------------------------------------------------------------------------------------------
+Vehicle V1 (Car, small, Regular, Non-Electric, priority=2) -> Slot S1 (small, General, No-Charger, distance=10, utility=30)
+Vehicle V2 (SUV, medium, VIP, Non-Electric, priority=3) -> Slot S2 (medium, Reserved, No-Charger, distance=5, utility=60)
+Vehicle V3 (Truck, large, Regular, Non-Electric, priority=1) -> No slot available
+Vehicle V4 (Van, large, Regular, Non-Electric, priority=4) -> Slot S3 (large, General, No-Charger, distance=15, utility=45)
+Vehicle V5 (EV-Car, small, Regular, Electric, priority=5) -> Slot S4 (small, General, Charger, distance=7, utility=78)

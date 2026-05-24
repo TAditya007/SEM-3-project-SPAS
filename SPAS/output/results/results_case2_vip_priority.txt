@@ -1,0 +1,5 @@
+Parking Allocation Result - case2_vip_priority
+------------------------------------------------------------------------------------------------------------------------
+Vehicle V1 (Car, small, Regular, Non-Electric, priority=2) -> Slot S1 (small, General, No-Charger, distance=8, utility=32)
+Vehicle V2 (SUV, medium, VIP, Non-Electric, priority=5) -> Slot S2 (medium, Reserved, No-Charger, distance=4, utility=81)
+Vehicle V3 (Sedan, medium, Regular, Non-Electric, priority=3) -> Slot S3 (medium, General, No-Charger, distance=12, utility=38)

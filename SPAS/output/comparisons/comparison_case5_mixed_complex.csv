@@ -1,0 +1,7 @@
+Vehicle ID,Vehicle Type,Size,VIP Status,Electric Status,Priority,Assigned Slot,Slot Size,Reserved,Charger,Distance,Utility
+V1,Car,small,Regular,Non-Electric,1,S1,small,No,No,11,19
+V2,EV-Car,small,Regular,Electric,5,S2,small,No,Yes,6,79
+V3,SUV,medium,VIP,Non-Electric,4,S3,medium,Yes,No,5,70
+V4,Van,large,Regular,Non-Electric,3,S5,large,No,No,14,36
+V5,Truck,large,Regular,Non-Electric,2,No slot available,-,-,-,-,-
+V6,EV-SUV,medium,Regular,Electric,5,S4,medium,No,Yes,7,78

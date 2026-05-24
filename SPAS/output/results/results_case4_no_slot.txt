@@ -1,0 +1,5 @@
+Parking Allocation Result - case4_no_slot
+------------------------------------------------------------------------------------------------------------------------
+Vehicle V1 (Truck, large, Regular, Non-Electric, priority=3) -> No slot available
+Vehicle V2 (Bus, large, Regular, Non-Electric, priority=4) -> No slot available
+Vehicle V3 (EV-Car, small, Regular, Electric, priority=5) -> Slot S2 (small, General, Charger, distance=7, utility=78)

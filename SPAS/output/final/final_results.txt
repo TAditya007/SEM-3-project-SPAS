@@ -1,0 +1,38 @@
+SMART PARKING ALLOCATION SYSTEM (SPAS)
+Polished Final Output Notes
+========================================
+
+Submission status
+--------------------
+This project is in a submission-ready academic state.
+The output package is organized to help evaluators verify correctness,
+constraints, utility-based decision logic, and multi-case testing quality.
+
+CO coverage summary
+--------------------
+CO1 - Problem representation: Covered using modular Python classes for vehicles, slots, and parking system entities.
+CO2 - Constraint satisfaction: Covered through valid slot allocation under size, reservation, EV, and availability rules.
+CO3 - Algorithmic reasoning: Covered through the solver workflow that produces valid or failure-aware allocations.
+CO4 - Decision support: Covered through utility-based scoring for assigned slots.
+CO5 - Testing and analysis: Covered through multiple academic test cases and cross-case comparison.
+CO6 - Result presentation: Covered through readable TXT outputs, final CSV summaries, and polished charts.
+
+Evaluator highlights
+--------------------
+Best allocation rate case: case2_vip_priority
+Highest observed utility case: case2_vip_priority
+Most constrained case: case4_no_slot
+
+Recommended final showcase set
+--------------------
+1. final_results.txt
+2. final_summary.csv
+3. allocation_rate_comparison.png
+4. average_utility_comparison.png
+5. allocation_outcome_comparison.png
+
+Short viva line
+--------------------
+The SPAS project models vehicles and slots in Python, applies CSP-style parking constraints,
+ranks valid assignments using utility scoring, and compares multiple test cases using
+structured output files and charts.

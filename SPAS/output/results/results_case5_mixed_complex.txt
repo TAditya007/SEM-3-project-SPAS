@@ -1,0 +1,8 @@
+Parking Allocation Result - case5_mixed_complex
+------------------------------------------------------------------------------------------------------------------------
+Vehicle V1 (Car, small, Regular, Non-Electric, priority=1) -> Slot S1 (small, General, No-Charger, distance=11, utility=19)
+Vehicle V2 (EV-Car, small, Regular, Electric, priority=5) -> Slot S2 (small, General, Charger, distance=6, utility=79)
+Vehicle V3 (SUV, medium, VIP, Non-Electric, priority=4) -> Slot S3 (medium, Reserved, No-Charger, distance=5, utility=70)
+Vehicle V4 (Van, large, Regular, Non-Electric, priority=3) -> Slot S5 (large, General, No-Charger, distance=14, utility=36)
+Vehicle V5 (Truck, large, Regular, Non-Electric, priority=2) -> No slot available
+Vehicle V6 (EV-SUV, medium, Regular, Electric, priority=5) -> Slot S4 (medium, General, Charger, distance=7, utility=78)

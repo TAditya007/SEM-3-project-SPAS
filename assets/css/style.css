@@ -219,3 +219,39 @@
       padding: 72px 0 48px;
     }
   }
+
+  .table-wrapper {
+    overflow-x: auto;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 8px;
+  }
+  
+  th,
+  td {
+    border: 1px solid var(--line);
+    padding: 14px;
+    text-align: left;
+    vertical-align: top;
+  }
+  
+  th {
+    background: rgba(76, 201, 240, 0.08);
+    color: var(--white);
+  }
+  
+  td {
+    color: var(--muted);
+  }
+  
+  .card a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  
+  .card a:hover {
+    text-decoration: underline;
+  }

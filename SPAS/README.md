@@ -6,7 +6,7 @@ A Python-based academic project that allocates vehicles to suitable parking slot
 
 - GitHub Repository: [SEM-3-project-SPAS](https://github.com/TAditya007/SEM-3-project-SPAS)
 - GitHub Pages Demo: [SPAS Project Showcase](https://taditya007.github.io/SEM-3-project-SPAS/)
-- Project README: [README.md](https://github.com/TAditya007/SEM-3-project-SPAS/blob/main/SPAS/README.md) 
+- Project README: [README.md](https://github.com/TAditya007/SEM-3-project-SPAS/blob/main/SPAS/README.md)
 
 ## Project Overview
 

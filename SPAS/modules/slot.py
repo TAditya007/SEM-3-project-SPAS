@@ -1,5 +1,6 @@
 from dataclasses import dataclass
 
+
 @dataclass
 class Slot:
     slot_id: str

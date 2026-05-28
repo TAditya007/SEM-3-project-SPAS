@@ -18,7 +18,6 @@ TEST_CASES = {
             Slot("S4", "small", 7, True, False, True),
         ],
     },
-
     "case2_vip_priority": {
         "vehicles": [
             Vehicle("V1", "Car", "small", 2, False, False),
@@ -31,7 +30,6 @@ TEST_CASES = {
             Slot("S3", "medium", 12, True, False, False),
         ],
     },
-
     "case3_ev_charging": {
         "vehicles": [
             Vehicle("V1", "EV-Car", "small", 5, False, True),
@@ -44,7 +42,6 @@ TEST_CASES = {
             Slot("S3", "medium", 5, True, False, True),
         ],
     },
-
     "case4_no_slot": {
         "vehicles": [
             Vehicle("V1", "Truck", "large", 3, False, False),
@@ -56,7 +53,6 @@ TEST_CASES = {
             Slot("S2", "small", 7, True, False, True),
         ],
     },
-
     "case5_mixed_complex": {
         "vehicles": [
             Vehicle("V1", "Car", "small", 1, False, False),

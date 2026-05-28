@@ -1,164 +1,237 @@
 # Smart Parking Allocation System (SPAS)
 
-A Python-based academic project that allocates vehicles to suitable parking slots using constraint-based reasoning and utility-based decision making for final CFAI Term 3 submission.
+## Abstract
 
-## Live Links
+Smart Parking Allocation System (SPAS) is an Artificial Intelligence mini project developed for the course **Computational Foundations for Artificial Intelligence**. The project models parking slot allocation as an AI problem and integrates problem formulation, search-based candidate selection, constraint satisfaction, utility-based decision making, uncertainty-aware reasoning, and explainable outputs into a single academic workflow.
 
-- GitHub Repository: [SEM-3-project-SPAS](https://github.com/TAditya007/SEM-3-project-SPAS)
-- GitHub Pages Demo: [SPAS Project Showcase](https://taditya007.github.io/SEM-3-project-SPAS/)
-- Project README: [README.md](https://github.com/TAditya007/SEM-3-project-SPAS/blob/main/SPAS/README.md)
+The system assigns parking slots to vehicles based on slot availability, vehicle size, special category, and allocation constraints. The implementation is designed for submission quality, with a structured codebase, GUI-based interaction, clear module separation, and professional documentation.
 
-## Project Overview
+## Project overview
 
-The Smart Parking Allocation System (SPAS) simulates intelligent parking allocation for different types of vehicles under realistic parking constraints. The system checks whether a vehicle can be assigned to a slot based on size compatibility, VIP reservation rules, electric charging requirements, and slot availability, and then uses utility-based scoring to select the most suitable valid slot [file:3].
+SPAS is designed to automate parking slot allocation in a structured and explainable way. Instead of manually assigning a vehicle to any free position, the system evaluates slot validity using parking rules and AI logic.
 
-This project is organized as a modular Python system for academic demonstration and submission. It generates case-wise text outputs, comparison CSV files, utility charts, and final summary files through the project pipeline itself, supporting explainable and structured academic evaluation [file:1].
+The project is aligned to the CO1 to CO6 structure of the course and adapts the academic AI pipeline to a real parking allocation problem. All course outcomes are covered in the project through parking-domain implementation, with strongest coverage in problem formulation, CSP-based allocation, and integrated explainable pipeline execution.
 
-## Project Objectives
+## Key objectives
 
-- Model vehicles and parking slots using Python dataclasses and modular files .
-- Apply constraint satisfaction logic for valid slot assignment.
-- Use utility-based scoring to improve decision quality.
-- Evaluate the system using multiple academic test cases and output files.
-- Produce clean outputs for submission, screenshots, viva explanation, and evaluator review .
+- Formulate parking allocation as an AI problem.
+- Represent vehicles, slots, parking rules, and categories clearly.
+- Apply candidate exploration and search reasoning.
+- Validate assignments using CSP-based logic.
+- Support utility-oriented selection among valid slots.
+- Extend the system with uncertainty-aware reasoning.
+- Produce clean outputs and explainable traces for academic evaluation.
 
-## CO Mapping
+## Modules covered
 
-| CO | Academic expectation | SPAS implementation status |
-| --- | --- | --- |
-| CO1 | Problem formulation, representation, PEAS, constraints, Python data structures | **Implemented** through vehicle/slot modeling, parking rules, modular Python classes, and structured test cases |
-| CO2 | Search algorithms, heuristics, empirical profiling | **Partially demonstrated** through structured candidate evaluation and multi-case analysis; can be strengthened further with explicit search-comparison metrics |
-| CO3 | CSP modeling, backtracking/constraint reasoning, explainability | **Implemented** through rule-based allocation constraints and valid-slot filtering for parking assignment |
-| CO4 | Utility-based decision making, bounded selection logic | **Implemented** through utility scoring based on priority, distance, VIP preference, and EV charging preference |
-| CO5 | Reasoning under uncertainty, probabilistic update | **Partially supported** in project architecture and extendable for uncertain slot availability; visible probabilistic module can further strengthen submission |
-| CO6 | Integrated AI pipeline with explainable outputs | **Implemented** through `main.py`, `pipeline.py`, case-wise outputs, charts, final summaries, and integrated project workflow |
+### `vehicle.py`
+
+Defines the vehicle model and stores vehicle-related properties such as type, size, and category.
+
+### `slot.py`
+
+Defines parking slot attributes such as slot ID, size, availability, reservation status, and EV charging support.
+
+### `parking.py`
+
+Represents the parking structure and manages predefined parking slot groups.
+
+### `constraints.py`
+
+Implements allocation validity rules including size compatibility, category restrictions, and slot availability checks.
+
+### `solver.py`
+
+Handles slot search and assignment logic by finding valid candidates for allocation.
+
+### `decision.py`
+
+Implements the decision layer used to select the most suitable slot among valid candidates.
+
+### `summary.py`
+
+Generates readable summaries of allocation decisions and final results.
+
+### `utils.py`
+
+Contains helper functions used across modules.
+
+### `visualization.py`
+
+Supports output presentation or data visualization for result interpretation.
+
+### `gui.py`
+
+Provides the graphical user interface for entering vehicle details, applying category logic, assigning slots, and viewing allocation results.
+
+### `main.py`
+
+Acts as the main execution entry point for the project.
+
+### `pipeline.py`
+
+Integrates the overall AI workflow across the modules for end-to-end execution.
+
+## Academic mapping
+
+### CO1: Problem formulation and representation
+
+SPAS models parking allocation using entities such as slots, vehicles, categories, constraints, and PEAS-style reasoning. This covers AI problem formulation, state understanding, actions, constraints, and structured representation in Python.
+
+### CO2: Search and candidate generation
+
+The system explores valid parking slot candidates and supports structured allocation reasoning. Candidate slots are generated and filtered before final selection, which reflects search-based exploration in the parking domain.
+
+### CO3: CSP-based allocation
+
+Parking assignment is handled as a constraint satisfaction problem using size, category, and availability rules. This is one of the strongest parts of the project because valid slot assignment directly depends on satisfying all constraints.
+
+### CO4: Utility-based decision making
+
+When multiple valid slots exist, decision logic can be used to choose the most suitable slot. This covers utility-based selection by choosing the best option from feasible candidates instead of selecting randomly.
+
+### CO5: Reasoning under uncertainty
+
+The project supports lightweight uncertainty-aware extension for slot availability and changing parking conditions. This CO is covered through probabilistic or belief-based interpretation of uncertain slot status in the final academic pipeline.
+
+### CO6: Integrated AI pipeline
+
+The final system combines all the above modules into a clean and explainable AI workflow. It integrates representation, search, CSP validation, decision logic, and uncertainty-aware reasoning into one structured submission-ready pipeline.
 
 ## Features
 
-- Modular Python implementation
-- Constraint-based parking allocation
-- Utility-based slot selection
-- Multi-case testing support
-- Text and CSV result generation
-- Utility chart generation
-- Final summary generation
-- GitHub Pages academic showcase
-- Submission-ready project structure
+- GUI-based parking allocation.
+- Predefined slot groups.
+- Vehicle type to size mapping.
+- VIP, Reservable, EV, and General category logic.
+- Mutually exclusive special-category selection.
+- Constraint-based validation.
+- Slot allocation display in tabular format.
+- Delete selected entry and free slot feature.
+- Modular code organization.
+- Submission-ready documentation.
 
-## Technologies Used
+## Parking model
 
-- Python 3.x
-- Matplotlib
-- CSV module
-- Object-Oriented Programming (OOP)
-- Constraint-based reasoning
-- Utility-based decision making
-- Git and GitHub
-- GitHub Pages for static showcase deployment
+The parking system is based on predefined slot groups:
 
-## Project Structure
+- `A1-A100` for VIP vehicles.
+- `B1-B200` for Reservable vehicles.
+- `C1-C300` for General vehicles.
+- `E1-E50` for EV vehicles.
+
+General slots are divided internally as follows:
+
+- `C1-C100` for small vehicles.
+- `C101-C200` for medium vehicles.
+- `C201-C300` for large vehicles.
+
+This predefined structure improves consistency and keeps the parking environment realistic.
+
+## Project structure
 
 ```text
-software/
-├── index.html
+SOFTWARE/
 ├── assets/
 │   ├── css/
-│   │   └── style.css
-│   └── js/
-│       └── script.js
-└── SPAS/
-    ├── README.md
-    ├── main.py
-    ├── pipeline.py
-    ├── requirements.txt
-    ├── data/
-    │   └── test_cases.py
-    ├── modules/
-    │   ├── parking.py
-    │   ├── vehicle.py
-    │   ├── slot.py
-    │   ├── constraints.py
-    │   ├── solver.py
-    │   ├── decision.py
-    │   ├── visualization.py
-    │   └── summary.py
-    └── output/
-        ├── charts/
-        ├── comparisons/
-        ├── final/
-        └── results/
+│   ├── js/
+│   └── images/
+│       └── spas-gui.png
+├── SPAS/
+│   ├── data/
+│   ├── modules/
+│   │   ├── constraints.py
+│   │   ├── decision.py
+│   │   ├── parking.py
+│   │   ├── slot.py
+│   │   ├── solver.py
+│   │   ├── summary.py
+│   │   ├── utils.py
+│   │   ├── vehicle.py
+│   │   └── visualization.py
+│   ├── output/
+│   ├── gui.py
+│   ├── main.py
+│   ├── pipeline.py
+│   ├── README.md
+│   └── requirements.txt
+├── .gitignore
+└── index.html
 ```
 
-## Working Principle
+## GUI preview
 
-1. Vehicles and parking slots are loaded from predefined academic test cases or a custom case input.
-2. The system checks slot feasibility using parking constraints such as size, reservation, charger support, and availability.
-3. Valid slots are considered for each vehicle.
-4. Utility is calculated to rank feasible assignments.
-5. The best valid slot is selected for each vehicle.
-6. Case-wise outputs are saved as text, CSV, and charts.
-7. Final summary files are generated across all cases for academic review .
+![SPAS GUI](../assets/images/spas-gui.png)
 
-## Constraints Considered
+## Repository link
 
-- Vehicle size must fit slot size.
-- Reserved slots are allowed only for eligible VIP vehicles.
-- Electric vehicles should be assigned charger-supported slots when required.
-- A slot cannot be assigned to multiple vehicles simultaneously.
-- Unavailable slots are rejected before allocation.
+Add your repository link here:
 
-## Utility Logic
+```text
+https://github.com/your-username/your-repository-name
+```
 
-The project uses a simple utility function to rank valid parking slots after constraint checking. The score currently combines vehicle priority, slot distance, VIP-reserved compatibility, and EV-charger compatibility to improve the quality of final allocation decisions .
+## How to run
 
-## Test Cases
+### Step 1: Open terminal and move to project folder
 
-The project includes multiple academic test scenarios for evaluation and demonstration:
+```bash
+cd SPAS
+```
 
-- `case1_normal` - Standard parking allocation
-- `case2_vip_priority` - VIP-focused parking behavior
-- `case3_ev_charging` - Electric vehicle charging allocation
-- `case4_no_slot` - Failure case when valid slots are not available
-- `case5_mixed_complex` - Mixed-constraint scenario for stronger evaluation
+### Step 2: Install required packages
 
-## Output Files Generated
+```bash
+pip install -r requirements.txt
+```
 
-After running the project, the system generates structured outputs through its own pipeline for academic review and final submission.
+### Step 3: Run the GUI
 
-### Case-wise outputs
+```bash
+python gui.py
+```
 
-- `output/results/results_case*.txt`
-- `output/comparisons/comparison_case*.csv`
-- `output/charts/utility_chart_case*.png`
-
-### Final outputs
-
-- `output/final/final_summary.csv`
-- `output/final/final_results.txt`
-- Final comparison charts in `output/charts/`
-
-## How to Run
-
-1. Open the project folder in VS Code or terminal.
-2. Change into the SPAS project directory if needed.
-3. Activate the virtual environment if created.
-4. Run:
+### Step 4: Run the integrated project flow
 
 ```bash
 python main.py
 ```
 
-1. Check the `output/` folder for generated files.
+If your final integrated execution is connected through `pipeline.py`, you may also run:
 
-## Academic Notes
+```bash
+python pipeline.py
+```
 
-This project is strongest in problem representation, parking constraint validation, utility-based decision support, modular implementation, and structured output generation. Based on the current handout expectations, CO2 and CO5 can be strengthened further by adding explicit search-comparison metrics and a lightweight uncertainty reasoning module, while the present version already serves as a solid and submission-ready SPAS academic prototype.
+## GitHub Pages
 
-## Deployment
+The project also includes a static project presentation page for GitHub Pages using:
 
-The project includes a GitHub Pages showcase page for academic presentation and quick online review:
+- `index.html`
+- `assets/css/style.css`
+- `assets/js/script.js`
 
-- Live Demo: [SPAS Project Showcase](https://taditya007.github.io/SEM-3-project-SPAS/)
-- Repository: [SEM-3-project-SPAS](https://github.com/TAditya007/SEM-3-project-SPAS)
+This keeps the website separate from the Python project and gives the submission a professional presentation layer.
 
-This deployment is a static project showcase page and does not replace the Python execution pipeline. Final outputs are generated by running the project through `main.py`, ensuring the academic evidence comes from the project itself [cite:17].
+## Output expectation
+
+The final `output/` folder should contain only meaningful submission outputs such as:
+
+- allocation results
+- summaries
+- reasoning trace
+- final reports
+- charts or screenshots if required
+
+## Professional highlights
+
+- Structured and modular design.
+- Clean separation between website and Python implementation.
+- Submission-oriented documentation.
+- Clear CO1 to CO6 alignment.
+- Practical GUI-based demonstration.
+- Explainable and extensible AI workflow.
+
+## Conclusion
+
+SPAS demonstrates how parking allocation can be solved as an AI problem using representation, constraints, decision logic, and integrated reasoning. The project is organized to support academic submission, repository presentation, and practical demonstration in a professional format

@@ -3,251 +3,378 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Smart Parking Allocation System | SPAS</title>
-  <meta name="description" content="Academic project showcase for Smart Parking Allocation System (SPAS)." />
+  <title>SPAS | Smart Parking Allocation System</title>
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
+
   <header class="hero">
     <div class="container">
-      <p class="tag">Academic Project Showcase</p>
-      <h1>Smart Parking Allocation System</h1>
-      <p class="hero-text">
-        A Python-based academic project for intelligent parking slot allocation using
-        constraint validation, utility-based decision support, and a structured output pipeline.
+      <h1>Smart Parking Allocation System (SPAS)</h1>
+      <p>
+        An AI-based project for Computational Foundations for Artificial Intelligence that applies
+        problem formulation, search, constraint satisfaction, utility-based reasoning, uncertainty-aware design,
+        and explainable outputs to parking slot allocation.
       </p>
 
-      <div class="hero-buttons">
-        <a class="btn btn-primary" href="https://github.com/TAditya007/SEM-3-project-SPAS" target="_blank" rel="noopener noreferrer">
-          View GitHub Repository
-        </a>
-        <a class="btn btn-secondary" href="https://github.com/TAditya007/SEM-3-project-SPAS/blob/main/SPAS/README.md" target="_blank" rel="noopener noreferrer">
-          Read README
-        </a>
-        <a class="btn btn-secondary" href="#overview">
-          Explore Project
-        </a>
+      <div class="hero-actions">
+        <a href="#overview" class="btn">Explore Project</a>
+        <a href="https://github.com/TAditya007/SEM-3-project-SPAS" class="btn btn-outline" target="_blank" rel="noopener noreferrer">View Repository</a>
+        <a href="https://github.com/TAditya007/SEM-3-project-SPAS/blob/main/SPAS/README.md" class="btn btn-outline" target="_blank" rel="noopener noreferrer">View README</a>
       </div>
     </div>
   </header>
 
+  <nav class="navbar">
+    <div class="container">
+      <ul class="nav-links">
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#abstract">Abstract</a></li>
+        <li><a href="#problem">Problem</a></li>
+        <li><a href="#slots">Parking Model</a></li>
+        <li><a href="#modules">Modules</a></li>
+        <li><a href="#co-mapping">CO Mapping</a></li>
+        <li><a href="#gui">GUI</a></li>
+        <li><a href="#workflow">Pipeline</a></li>
+        <li><a href="#commands">Commands</a></li>
+        <li><a href="#preview">Preview</a></li>
+        <li><a href="#outputs">Outputs</a></li>
+      </ul>
+    </div>
+  </nav>
+
   <main class="container">
-    <section id="overview" class="card">
-      <h2>Project Overview</h2>
+
+    <section id="overview" class="section">
+      <h2>Project overview</h2>
       <p>
-        The Smart Parking Allocation System (SPAS) assigns vehicles to suitable parking slots by
-        checking parking constraints and ranking valid options using a utility score. The project
-        models vehicles and slots, filters invalid assignments, selects the best feasible slot,
-        and generates structured outputs for academic evaluation.
+        Smart Parking Allocation System (SPAS) is designed to allocate parking slots to vehicles using AI reasoning
+        instead of manual assignment. The project follows a structured academic workflow and adapts the required
+        AI pipeline to a practical parking-domain implementation.
+      </p>
+      <p>
+        The final system focuses on predefined parking slots, constraint validation, category-based allocation,
+        modular implementation, and explainable outputs for academic submission. All CO1 to CO6 are covered through
+        parking-domain implementation, with strongest coverage in formulation, CSP-based allocation, and integrated pipeline execution.
       </p>
     </section>
 
-    <section class="grid-section">
-      <article class="card">
-        <h2>Project Objectives</h2>
-        <ul>
-          <li>Model the smart parking problem using structured Python-based representation.</li>
-          <li>Apply parking constraints to validate feasible slot assignments.</li>
-          <li>Use utility-based scoring to improve allocation quality.</li>
-          <li>Generate structured outputs for analysis, comparison, and viva explanation.</li>
-          <li>Build a neat integrated Python pipeline for academic submission.</li>
-        </ul>
-      </article>
-
-      <article class="card">
-        <h2>Core Features</h2>
-        <ul>
-          <li>Vehicle and parking slot modeling</li>
-          <li>Constraint-based slot validation</li>
-          <li>Utility-based slot scoring</li>
-          <li>Multiple academic test case execution</li>
-          <li>Structured text, CSV, and chart generation</li>
-          <li>Clean modular Python implementation</li>
-        </ul>
-      </article>
+    <section id="abstract" class="section">
+      <h2>Abstract</h2>
+      <p>
+        SPAS models parking allocation as an Artificial Intelligence problem in which vehicles must be assigned to
+        valid parking slots according to size compatibility, category restrictions, slot availability, and parking rules.
+        The project combines problem representation, candidate exploration, CSP-based validation, utility-based decision
+        support, and integrated reasoning into one complete workflow.
+      </p>
+      <p>
+        The implementation is designed for professional academic presentation through a GUI interface, modular Python
+        code structure, clean outputs, and a GitHub Pages project showcase.
+      </p>
     </section>
 
-    <section class="card">
-      <h2>Academic CO Coverage</h2>
+    <section id="problem" class="section">
+      <h2>Problem statement</h2>
+      <p>
+        Vehicles entering a parking area must be assigned to valid slots while satisfying conditions such as
+        size compatibility, slot availability, reserved access, EV charging support, and category-specific rules.
+      </p>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Inputs</h3>
+          <ul>
+            <li>Vehicle number</li>
+            <li>Owner name</li>
+            <li>Phone number</li>
+            <li>Vehicle type</li>
+            <li>Special category</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Processing</h3>
+          <ul>
+            <li>Vehicle type to size mapping</li>
+            <li>Category detection</li>
+            <li>Constraint checking</li>
+            <li>Slot search and assignment</li>
+            <li>Reasoning trace generation</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Outputs</h3>
+          <ul>
+            <li>Assigned slot</li>
+            <li>Allocation table</li>
+            <li>Constraint proof</li>
+            <li>Trace summary</li>
+            <li>Final integrated output</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="slots" class="section">
+      <h2>Predefined parking model</h2>
+      <p>
+        The system uses fixed slot groups instead of manual slot creation, which improves consistency and makes the
+        parking environment realistic for implementation and demonstration.
+      </p>
+
+      <div class="tags">
+        <span class="tag">A1-A100 VIP</span>
+        <span class="tag">B1-B200 Reservable</span>
+        <span class="tag">C1-C300 General</span>
+        <span class="tag">E1-E50 EV</span>
+      </div>
+
       <div class="table-wrapper">
         <table>
           <thead>
             <tr>
-              <th>CO / Module</th>
-              <th>Academic expectation</th>
-              <th>Current SPAS coverage</th>
+              <th>Slot Group</th>
+              <th>Purpose</th>
+              <th>Size Rule</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>CO1 / Problem Formulation</td>
-              <td>Represent entities, rules, constraints, and goal clearly.</td>
-              <td>Implemented through vehicles, parking slots, rule definitions, and structured parking allocation modeling.</td>
+              <td>A1-A100</td>
+              <td>VIP</td>
+              <td>All large</td>
             </tr>
             <tr>
-              <td>CO2 / Search Reasoning</td>
-              <td>Demonstrate systematic algorithmic exploration and comparison.</td>
-              <td>Partially demonstrated through structured allocation flow and case-based evaluation; can be extended further with explicit search metrics.</td>
+              <td>B1-B200</td>
+              <td>Reservable</td>
+              <td>All large</td>
             </tr>
             <tr>
-              <td>CO3 / CSP Allocation</td>
-              <td>Apply constraints, valid domains, and rule-based filtering.</td>
-              <td>Implemented through parking constraints such as size fit, reservation rules, EV charging support, and slot availability.</td>
+              <td>C1-C100</td>
+              <td>General</td>
+              <td>Small</td>
             </tr>
             <tr>
-              <td>CO4 / Decision Making</td>
-              <td>Select the best valid outcome using utility or scoring logic.</td>
-              <td>Implemented through utility-based slot scoring using priority, distance, reserved-slot preference, and charging compatibility.</td>
+              <td>C101-C200</td>
+              <td>General</td>
+              <td>Medium</td>
             </tr>
             <tr>
-              <td>CO5 / Uncertainty Reasoning</td>
-              <td>Handle uncertain or dynamic conditions in decision support.</td>
-              <td>Currently reflected as an extension-ready area for dynamic slot availability and uncertainty-aware allocation.</td>
+              <td>C201-C300</td>
+              <td>General</td>
+              <td>Large</td>
             </tr>
             <tr>
-              <td>CO6 / Integrated AI Pipeline</td>
-              <td>Combine all modules into one explainable system with outputs.</td>
-              <td>Implemented through the final Python pipeline with result files, summaries, and charts for academic review.</td>
+              <td>E1-E50</td>
+              <td>EV</td>
+              <td>All large with charger</td>
             </tr>
           </tbody>
         </table>
       </div>
     </section>
 
-    <section class="card">
-      <h2>System Workflow</h2>
-      <div class="workflow">
-        <div class="workflow-step">
-          <span>1</span>
-          <p>Define vehicles with type, size, priority, VIP status, and EV requirements.</p>
+    <section id="modules" class="section">
+      <h2>Modules covered</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Core entity modules</h3>
+          <ul>
+            <li><strong>vehicle.py</strong> defines vehicle properties</li>
+            <li><strong>slot.py</strong> defines parking slot properties</li>
+            <li><strong>parking.py</strong> manages parking structure and slot groups</li>
+          </ul>
         </div>
-        <div class="workflow-step">
-          <span>2</span>
-          <p>Define parking slots with size, distance, reservation, charger, and availability properties.</p>
+
+        <div class="card">
+          <h3>Allocation modules</h3>
+          <ul>
+            <li><strong>constraints.py</strong> checks allocation validity</li>
+            <li><strong>solver.py</strong> handles slot solving logic</li>
+            <li><strong>decision.py</strong> supports best-slot selection</li>
+          </ul>
         </div>
-        <div class="workflow-step">
-          <span>3</span>
-          <p>Apply parking constraints to eliminate invalid slot assignments.</p>
+
+        <div class="card">
+          <h3>Support modules</h3>
+          <ul>
+            <li><strong>summary.py</strong> prepares result summaries</li>
+            <li><strong>utils.py</strong> contains helper functions</li>
+            <li><strong>visualization.py</strong> supports output presentation</li>
+          </ul>
         </div>
-        <div class="workflow-step">
-          <span>4</span>
-          <p>Evaluate feasible slots using utility-based scoring logic.</p>
-        </div>
-        <div class="workflow-step">
-          <span>5</span>
-          <p>Select the best valid assignment and generate structured final outputs.</p>
+
+        <div class="card">
+          <h3>Execution modules</h3>
+          <ul>
+            <li><strong>gui.py</strong> provides user interaction</li>
+            <li><strong>main.py</strong> runs the main project flow</li>
+            <li><strong>pipeline.py</strong> integrates the complete workflow</li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <section class="grid-section">
-      <article class="card">
-        <h2>Technologies Used</h2>
-        <ul>
-          <li>Python</li>
-          <li>Object-Oriented Programming</li>
-          <li>Dataclasses</li>
-          <li>Constraint Satisfaction concepts</li>
-          <li>Utility-based decision logic</li>
-          <li>CSV and chart generation</li>
-          <li>GitHub and GitHub Pages</li>
-        </ul>
-      </article>
-
-      <article class="card">
-        <h2>Outputs Generated</h2>
-        <ul>
-          <li>Case-wise result text files</li>
-          <li>Comparison CSV files</li>
-          <li>Utility charts</li>
-          <li>Final summary files</li>
-          <li>Submission-ready output folder structure</li>
-        </ul>
-      </article>
+    <section id="co-mapping" class="section">
+      <h2>CO1 to CO6 mapping</h2>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>CO</th>
+              <th>Academic expectation</th>
+              <th>SPAS implementation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>CO1</td>
+              <td>Problem formulation and representation</td>
+              <td>Parking entities, PEAS, slots, vehicles, and constraints</td>
+            </tr>
+            <tr>
+              <td>CO2</td>
+              <td>Search and heuristic analysis</td>
+              <td>Candidate slot generation and allocation exploration</td>
+            </tr>
+            <tr>
+              <td>CO3</td>
+              <td>CSP modeling and constraint solving</td>
+              <td>Valid slot assignment with compatibility checks</td>
+            </tr>
+            <tr>
+              <td>CO4</td>
+              <td>Utility-based decision making</td>
+              <td>Best valid slot selection logic</td>
+            </tr>
+            <tr>
+              <td>CO5</td>
+              <td>Reasoning under uncertainty</td>
+              <td>Lightweight availability prediction and belief update support</td>
+            </tr>
+            <tr>
+              <td>CO6</td>
+              <td>Integrated explainable AI pipeline</td>
+              <td>Combined workflow with traces, outputs, and final reasoning flow</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
 
-    <section class="card">
-      <h2>Why This Project Matters</h2>
+    <section id="gui" class="section">
+      <h2>GUI design</h2>
       <p>
-        Smart parking is a practical real-world engineering problem where efficient allocation can
-        reduce congestion, improve parking utilization, and support intelligent transport systems.
-        This project demonstrates how AI-inspired reasoning can be applied to a relatable parking
-        scenario using modular Python implementation and explainable decision flow.
+        The GUI is designed for final submission with simple interaction and clean input validation. Vehicle number is
+        uppercase alphanumeric, owner name is limited to letters and spaces, and phone number is restricted to exactly
+        10 digits.
       </p>
-    </section>
 
-    <section class="card">
-      <h2>Repository Structure</h2>
-      <div class="repo-box">
-<pre><code>SOFTWARE/
-├── index.html
-├── assets/
-│   ├── css/
-│   │   └── style.css
-│   └── js/
-│       └── script.js
-└── SPAS/
-    ├── README.md
-    ├── main.py
-    ├── pipeline.py
-    ├── requirements.txt
-    ├── data/
-    │   └── test_cases.py
-    ├── modules/
-    │   ├── parking.py
-    │   ├── vehicle.py
-    │   ├── slot.py
-    │   ├── constraints.py
-    │   ├── solver.py
-    │   ├── decision.py
-    │   ├── visualization.py
-    │   └── summary.py
-    └── output/
-        ├── charts/
-        ├── comparisons/
-        ├── final/
-        └── results/</code></pre>
+      <div class="grid">
+        <div class="card">
+          <h3>Vehicle entry</h3>
+          <ul>
+            <li>Vehicle number</li>
+            <li>Owner name</li>
+            <li>Phone number</li>
+            <li>Vehicle type</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Category logic</h3>
+          <ul>
+            <li>VIP checkbox</li>
+            <li>Reservable checkbox</li>
+            <li>EV checkbox</li>
+            <li>No selection = General</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Allocation actions</h3>
+          <ul>
+            <li>Assign slot</li>
+            <li>Display under list</li>
+            <li>Delete selected entry</li>
+            <li>Free slot after deletion</li>
+          </ul>
+        </div>
       </div>
     </section>
 
-    <section class="card">
-      <h2>Project Links</h2>
+    <section id="workflow" class="section">
+      <h2>Integrated pipeline</h2>
+      <p>
+        SPAS follows a six-stage academic workflow for problem formulation, search, CSP, utility reasoning,
+        uncertainty handling, and integrated explainable output generation.
+      </p>
+
+      <div class="pipeline">
+        <div class="step">CO1<br><span>Formulation</span></div>
+        <div class="step">CO2<br><span>Search</span></div>
+        <div class="step">CO3<br><span>CSP</span></div>
+        <div class="step">CO4<br><span>Utility</span></div>
+        <div class="step">CO5<br><span>Uncertainty</span></div>
+        <div class="step">CO6<br><span>Pipeline</span></div>
+      </div>
+    </section>
+
+    <section id="commands" class="section">
+      <h2>Repository and commands</h2>
+      <p>
+        <strong>Repository:</strong>
+        <a href="https://github.com/TAditya007/SEM-3-project-SPAS" target="_blank" rel="noopener noreferrer">
+          https://github.com/TAditya007/SEM-3-project-SPAS
+        </a>
+      </p>
+    
+      <p>
+        <strong>README File:</strong>
+        <a href="https://github.com/TAditya007/SEM-3-project-SPAS/blob/main/SPAS/README.md" target="_blank" rel="noopener noreferrer">
+          View README.md
+        </a>
+      </p>
+    
+      <div class="code-block">
+    cd SPAS
+    pip install -r requirements.txt
+    python gui.py
+    python main.py
+      </div>
+    </section>
+
+    <section id="preview" class="section">
+      <h2>GUI preview</h2>
+      <p>
+        The following screenshot shows the GUI-based parking allocation interface used for vehicle entry,
+        category selection, and parking slot assignment.
+      </p>
+      <img src="assets/images/spas-gui.png" alt="SPAS GUI Screenshot" class="preview-image" />
+    </section>
+
+    <section id="outputs" class="section">
+      <h2>Expected outputs</h2>
       <ul>
-        <li>
-          GitHub Repository:
-          <a href="https://github.com/TAditya007/SEM-3-project-SPAS" target="_blank" rel="noopener noreferrer">
-            github.com/TAditya007/SEM-3-project-SPAS
-          </a>
-        </li>
-        <li>
-          README File:
-          <a href="https://github.com/TAditya007/SEM-3-project-SPAS/blob/main/SPAS/README.md" target="_blank" rel="noopener noreferrer">
-            Open README Documentation
-          </a>
-        </li>
-        <li>
-          Live Showcase:
-          <a href="https://taditya007.github.io/SEM-3-project-SPAS/" target="_blank" rel="noopener noreferrer">
-            GitHub Pages Deployment
-          </a>
-        </li>
+        <li>Allocated vehicle list from GUI</li>
+        <li>Constraint validation output</li>
+        <li>Reasoning trace file</li>
+        <li>Utility comparison output</li>
+        <li>Uncertainty update output</li>
+        <li>Integrated summary report</li>
       </ul>
-    </section>
-
-    <section class="card">
-      <h2>Academic Notes</h2>
       <p>
-        This project is strongest in problem representation, parking constraint handling,
-        utility-based decision support, modular Python implementation, and structured academic
-        outputs. Search comparison and uncertainty reasoning can be extended further, but the
-        current version already serves as a clean and submission-ready SPAS academic prototype.
+        The final presentation should highlight explainable reasoning, valid allocation logic, and clean result outputs.
       </p>
     </section>
+
   </main>
 
   <footer class="footer">
     <div class="container">
-      <p>SPAS | Smart Parking Allocation System | Academic GitHub Pages Showcase</p>
+      <p>Smart Parking Allocation System (SPAS) | CFAI Term 3 Project | KL University</p>
+      <button id="topBtn" class="top-btn">Back to Top</button>
     </div>
   </footer>
 
